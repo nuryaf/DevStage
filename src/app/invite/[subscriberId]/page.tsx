@@ -41,7 +41,9 @@ export default async function InvitePage(props: InvitePageProps) {
 					</div>
 					<InviteLinkInput inviteLink={inviteLink} />
 				</div>
-				<Stats />
+
+				{/* somente o page tem acesso ao params, então é necessário passar o subscriberId como prop */}
+				<Stats subscriberId={subscriberId} />
 			</div>
 			<Ranking />
 		</div>
